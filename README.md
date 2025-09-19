@@ -7,10 +7,13 @@ This project aims to build a machine learning model to predict whether a car ins
 The dataset used for this project is the "Car Insurance Data" from Kaggle.
 Source: https://www.kaggle.com/datasets/sagnik1511/car-insurance-data/data
 
-### Size: The dataset contains 10,000 observations and 19 columns, including 18 feature variables and one target variable.
+### Size: 
+The dataset contains 10,000 observations and 19 columns, including 18 feature variables and one target variable.
 
-Objective
-The primary goal is to create a robust predictive model that helps the insurance company better understand customer behavior and assess risk. This can lead to more personalized offers and optimized business strategies.
+Logistic Regression, K-Nearest Neighbors, and Random Forest were chosen for comparison because they represent a spectrum of machine learning approaches.
+- Logistic Regression: A simple and fast linear benchmark model for initial performance evaluation.
+- K-Nearest Neighbors (KNN): A non-linear, distance-based model used to see if a more complex approach is needed.
+- Random Forest: A powerful ensemble method known for high accuracy and robustness, chosen as a strong candidate for the final model.
 
 ### Key illustrations
 <img width="987" height="492" alt="image" src="https://github.com/user-attachments/assets/88f21d07-8306-4de3-9c33-4db94d41702f" />
