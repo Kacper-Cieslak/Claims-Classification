@@ -1,18 +1,41 @@
 # Car Insurance Claim Prediction 🚗
 
-### Project Overview
-This project aims to build a machine learning model to predict whether a car insurance customer will make a claim. This is a binary classification problem, where the model learns to predict a value of 1 (the customer made a claim) or 0 (the customer did not make a claim) based on various customer and driving behavior features.
+## Overview
 
-### Dataset
-The dataset used for this project is the "Car Insurance Data" from Kaggle.
-The dataset contains 10,000 observations and 19 columns, including 18 feature variables and one target variable.
-Source: https://www.kaggle.com/datasets/sagnik1511/car-insurance-data/data
+Binary classification project predicting whether a car insurance customer will make a claim.
 
-Logistic Regression, K-Nearest Neighbors, and Random Forest were chosen for comparison because they represent a spectrum of machine learning approaches.
-- Logistic Regression: A simple and fast linear benchmark model for initial performance evaluation.
-- K-Nearest Neighbors (KNN): A non-linear, distance-based model used to see if a more complex approach is needed.
-- Random Forest: A powerful ensemble method known for high accuracy and robustness, chosen as a strong candidate for the final model.
+Dataset: **10,000 observations, 18 features**  
+Models compared: **Logistic Regression, KNN, Random Forest**
+
+## Methodology
+
+- preprocessing with `Pipeline` and `ColumnTransformer`
+- Stratified 5-Fold Cross Validation
+- hyperparameter tuning with `GridSearchCV`
+- model selection based on **ROC-AUC**
+- final evaluation on an untouched test set
+- model interpretation with **Permutation Importance** and **Odds Ratios**
+
+## Results
+
+Best model: **Logistic Regression**
+
+- CV ROC-AUC: **0.924**
+- Test ROC-AUC: **0.916**
+- PR-AUC: **0.832**
+- Accuracy: **0.846**
+- Precision: **0.758**
+- Recall: **0.748**
+- F1-score: **0.753**
+
+The model generalized well to unseen data and correctly identified around **75% of actual claims**.
+
+## Key Findings
+
+`DRIVING_EXPERIENCE` was the strongest predictor of claim risk, followed by `POSTAL_CODE`, `VEHICLE_OWNERSHIP` and `VEHICLE_YEAR`.
+
+The results show that a relatively simple and interpretable Logistic Regression model can achieve strong predictive performance without requiring a more complex model.
 
 ### Key illustrations
 <img width="987" height="492" alt="image" src="https://github.com/user-attachments/assets/88f21d07-8306-4de3-9c33-4db94d41702f" />
-<img width="557" height="502" alt="image" src="https://github.com/user-attachments/assets/c1a6e1fe-11af-46d5-8b02-b2814fc454ea" />
+<img width="854" height="541" alt="image" src="https://github.com/user-attachments/assets/6dba9670-a94b-4640-a7fd-b6bcee5f68e0" />
